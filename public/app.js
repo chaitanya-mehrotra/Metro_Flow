@@ -2,7 +2,8 @@
    Namma Boarding Assistant – Frontend Logic
    ═══════════════════════════════════════════════════════════ */
 
-const API_BASE = "http://127.0.0.1:5000";
+// Use current host if running on web server, or localhost fallback
+const API_BASE = (window.location.protocol.startsWith("http")) ? "" : "http://127.0.0.1:5000";
 
 // ── DOM References ────────────────────────────────────────
 const originInput  = document.getElementById("origin-select");
